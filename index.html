@@ -31,7 +31,10 @@
                 class="shadow-sm appearance-none border border-gray-300 rounded-md w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 ease-in-out"
                 placeholder="e.g., Automobile Dealers - new"
                 aria-label="Class of Business Input"
+                list="businessClasses" <!-- IMPORTANT: Link to the datalist -->
             >
+            <!-- Datalist for autocomplete suggestions -->
+            <datalist id="businessClasses"></datalist>
         </div>
 
         <button
@@ -462,67 +465,132 @@ Wood Turned Products Mfg.,1,2,2,2,2,Ineligible if Protection Class 9 or 10.  Dus
 
         // Parse the embedded CSV data when the script loads
         const appetiteData = parseCSV(csvData);
+        // Extract all business descriptions for autocomplete
+        const businessDescriptions = appetiteData.map(item => item['Description Of Exposure']).filter(Boolean); // Filter out empty strings
+        // Sort the descriptions alphabetically for better user experience in autocomplete
+        businessDescriptions.sort();
+
         console.log("Parsed Appetite Data:", appetiteData); // For debugging
+        console.log("Business Descriptions for Autocomplete:", businessDescriptions); // For debugging
 
         const businessClassInput = document.getElementById('businessClass');
         const searchButton = document.getElementById('searchButton');
         const resultsDiv = document.getElementById('results');
+        const businessClassesDatalist = document.getElementById('businessClasses'); // Get the datalist element
+
+        // Function to populate the datalist with suggestions
+        function updateDatalist(inputValue) {
+            businessClassesDatalist.innerHTML = ''; // Clear previous suggestions
+            const searchTermLower = inputValue.toLowerCase();
+
+            if (searchTermLower.length === 0) {
+                return; // Don't show suggestions if input is empty
+            }
+
+            const filteredSuggestions = businessDescriptions.filter(description =>
+                description.toLowerCase().includes(searchTermLower)
+            );
+
+            // Limit the number of suggestions to keep it manageable
+            const maxSuggestions = 10;
+            for (let i = 0; i < Math.min(filteredSuggestions.length, maxSuggestions); i++) {
+                const option = document.createElement('option');
+                option.value = filteredSuggestions[i];
+                businessClassesDatalist.appendChild(option);
+            }
+        }
 
         // Function to perform the search
         function performSearch() {
             const searchTerm = businessClassInput.value.trim().toLowerCase();
             if (searchTerm === '') {
                 resultsDiv.innerHTML = `<p class="text-gray-500">Please enter a class of business to search.</p>`;
-                resultsDiv.classList.remove('bg-green-100', 'bg-red-100');
+                resultsDiv.classList.remove('bg-green-100', 'bg-red-100', 'bg-orange-100'); // Reset colors
                 resultsDiv.classList.add('bg-gray-50');
                 return;
             }
 
-            let foundMatch = false;
-            let appetiteStatus = "N/A"; // Default status
-
+            let foundItem = null;
             for (const item of appetiteData) {
-                // Access the "Description Of Exposure" column for matching
                 const description = item['Description Of Exposure'] ? item['Description Of Exposure'].trim().toLowerCase() : '';
-
-                // Simple exact match for now. Could be extended to partial match if needed.
-                if (description === searchTerm) {
-                    foundMatch = true;
-                    // Access the "Premises Liability" column to check appetite
-                    const premisesLiability = item['Premises Liability '] ? item['Premises Liability '].trim() : ''; // Note the space in the header
-
-                    if (premisesLiability === '1') {
-                        appetiteStatus = `<span class="font-bold text-green-700">IN APPETITE</span>`;
-                        resultsDiv.classList.remove('bg-red-100', 'bg-gray-50');
-                        resultsDiv.classList.add('bg-green-100');
-                    } else if (premisesLiability === '2') {
-                        appetiteStatus = `<span class="font-bold text-red-700">OUT OF APPETITE (Referral Required)</span>`;
-                        resultsDiv.classList.remove('bg-green-100', 'bg-gray-50');
-                        resultsDiv.classList.add('bg-red-100');
-                    } else {
-                        appetiteStatus = `<span class="font-bold text-orange-700">Status Unknown or Not Applicable</span>`;
-                        resultsDiv.classList.remove('bg-green-100', 'bg-red-100');
-                        resultsDiv.classList.add('bg-gray-50');
-                    }
-                    resultsDiv.innerHTML = `<p class="text-lg">"${item['Description Of Exposure']}" is ${appetiteStatus}.</p>`;
-                    break; // Stop after finding the first exact match
+                if (description.includes(searchTerm)) {
+                    foundItem = item;
+                    break;
                 }
             }
 
-            if (!foundMatch) {
-                resultsDiv.innerHTML = `<p class="text-lg text-gray-700">"${businessClassInput.value}" not found in our records.</p>`;
-                resultsDiv.classList.remove('bg-green-100', 'bg-red-100');
+            if (foundItem) {
+                let statusHtml = `<p class="text-lg font-bold">"${foundItem['Description Of Exposure']}"</p>`;
+                let requiresReview = false;
+                let wcNotApplicable = false;
+
+                // Define the liability columns to check
+                const columnsToCheck = [
+                    'Premises Liability ',
+                    'Products Liability ',
+                    'Property & IM',
+                    'Auto &             Garage',
+                    'WC'
+                ];
+
+                for (const col of columnsToCheck) {
+                    let value = foundItem[col] ? foundItem[col].trim().toLowerCase() : '';
+
+                    if (col === 'WC' && value === 'no wc') {
+                        wcNotApplicable = true;
+                    } else if (value === '2' || value === '3' || (value !== '1' && value !== '')) {
+                        // If any column has 2, 3, or other non-1/empty value, it requires review
+                        requiresReview = true;
+                        // No need to break, continue checking for other conditions or comments
+                    }
+                }
+
+                // Determine overall status based on simplified rules
+                if (requiresReview) {
+                    statusHtml += `<p class="text-2xl font-extrabold text-orange-700 mt-2">ELIGIBLE but requires review</p>`;
+                    resultsDiv.classList.remove('bg-green-100', 'bg-red-100', 'bg-gray-50');
+                    resultsDiv.classList.add('bg-orange-100');
+                } else {
+                    // All values are '1' or 'No WC' for WC
+                    statusHtml += `<p class="text-2xl font-extrabold text-green-700 mt-2">ELIGIBLE</p>`;
+                    resultsDiv.classList.remove('bg-red-100', 'bg-orange-100', 'bg-gray-50');
+                    resultsDiv.classList.add('bg-green-100');
+                }
+
+                // Add WC specific note if applicable
+                if (wcNotApplicable) {
+                    statusHtml += `<p class="text-sm mt-2">Note: Worker's Compensation is not available for this class.</p>`;
+                }
+
+                // Include comments if available
+                const comment = foundItem['Comments'] ? foundItem['Comments'].trim() : '';
+                if (comment) {
+                    statusHtml += `<p class="text-sm text-gray-600 mt-4 p-2 bg-blue-50 rounded-md border border-blue-200 text-left"><strong>Comments:</strong> ${comment}</p>`;
+                }
+                
+                resultsDiv.innerHTML = statusHtml;
+                resultsDiv.classList.remove('justify-center', 'text-center'); // Align content left
+                resultsDiv.classList.add('text-left');
+
+            } else {
+                resultsDiv.innerHTML = `<p class="text-lg text-gray-700">"${businessClassInput.value}" not found in our records or no close match.</p>`;
+                resultsDiv.classList.remove('bg-green-100', 'bg-red-100', 'bg-orange-100'); // Reset colors
                 resultsDiv.classList.add('bg-gray-50');
+                resultsDiv.classList.remove('text-left'); // Center text again if no match
+                resultsDiv.classList.add('justify-center', 'text-center');
             }
         }
 
         // Add event listeners
         searchButton.addEventListener('click', performSearch);
         businessClassInput.addEventListener('keypress', function(event) {
-            // Trigger search on Enter key press
             if (event.key === 'Enter') {
                 performSearch();
             }
+        });
+        // Add input event listener for autocomplete
+        businessClassInput.addEventListener('input', (event) => {
+            updateDatalist(event.target.value);
         });
     </script>
 </body>
