@@ -1,0 +1,545 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #4689cc; -webkit-text-stroke: #4689cc}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #8cd3fe; -webkit-text-stroke: #8cd3fe}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #c27e65; -webkit-text-stroke: #c27e65}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #cacaca; -webkit-text-stroke: #cacaca}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #6d7378; -webkit-text-stroke: #6d7378}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #cacaca; -webkit-text-stroke: #cacaca; min-height: 16.0px}
+    span.s1 {font-kerning: none; background-color: #171818}
+    span.s2 {font-kerning: none; color: #8cd3fe; background-color: #171818; -webkit-text-stroke: 0px #8cd3fe}
+    span.s3 {font-kerning: none; color: #6d6d6d; background-color: #171818; -webkit-text-stroke: 0px #6d6d6d}
+    span.s4 {font-kerning: none; color: #cacaca; background-color: #171818; -webkit-text-stroke: 0px #cacaca}
+    span.s5 {font-kerning: none; color: #c27e65; background-color: #171818; -webkit-text-stroke: 0px #c27e65}
+    span.s6 {font-kerning: none; color: #4689cc; background-color: #171818; -webkit-text-stroke: 0px #4689cc}
+    span.s7 {font-kerning: none; color: #d4d4d4; background-color: #171818; -webkit-text-stroke: 0px #d4d4d4}
+    span.s8 {font-kerning: none; color: #71c083; background-color: #171818; -webkit-text-stroke: 0px #71c083}
+    span.s9 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE</span><span class="s2"> html</span><span class="s1">&gt;</span></p>
+<p class="p1"><span class="s3">&lt;</span><span class="s1">html</span><span class="s4"> </span><span class="s2">lang</span><span class="s3">=</span><span class="s5">"en"</span><span class="s3">&gt;</span></p>
+<p class="p1"><span class="s3">&lt;</span><span class="s1">head</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s1">charset</span><span class="s3">=</span><span class="s5">"UTF-8"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s2">name</span><span class="s3">=</span><span class="s1">"viewport"</span><span class="s4"> </span><span class="s2">content</span><span class="s3">=</span><span class="s1">"width=device-width, initial-scale=1.0"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">title</span><span class="s3">&gt;</span><span class="s1">Business Appetite Checker</span><span class="s3">&lt;/</span><span class="s6">title</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Tailwind CSS CDN for easy styling --&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">script</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://cdn.tailwindcss.com"</span><span class="s3">&gt;&lt;/</span><span class="s6">script</span><span class="s3">&gt;</span></p>
+<p class="p1"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">style</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">/* Custom font */</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">body</span><span class="s1"> </span><span class="s7">{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-family:</span><span class="s1"> </span><span class="s8">"Inter"</span><span class="s7">,</span><span class="s1"> </span><span class="s5">sans-serif</span><span class="s7">;</span></p>
+<p class="p5"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">background-color:</span><span class="s4"> #f3f4f6</span><span class="s7">;</span><span class="s4"> </span><span class="s1">/* Light gray background */</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
+<p class="p1"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">style</span><span class="s3">&gt;</span></p>
+<p class="p1"><span class="s3">&lt;/</span><span class="s1">head</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s3">&lt;</span><span class="s6">body</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"min-h-screen flex items-center justify-center p-4"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white p-8 rounded-lg shadow-xl w-full max-w-md border border-gray-200"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">h1</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-3xl font-bold text-gray-800 mb-6 text-center"</span><span class="s3">&gt;</span><span class="s4">Business Appetite Checker</span><span class="s3">&lt;/</span><span class="s6">h1</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-gray-600 mb-6 text-center"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>Enter a class of business below to check if it's currently in our appetite.</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s9"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"mb-6"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">label</span><span class="s4"> </span><span class="s2">for</span><span class="s3">=</span><span class="s1">"businessClass"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"block text-gray-700 text-sm font-semibold mb-2"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>Class of Business:</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/label&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;input</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>type="text"</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>id="businessClass"</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>class="shadow-sm appearance-none border border-gray-300 rounded-md w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 ease-in-out"</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>placeholder="e.g., Automobile Dealers - new"</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>aria-label="Class of Business Input"</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p6"><span class="s9"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>&lt;button</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>id="searchButton"</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75 transition duration-200 ease-in-out transform hover:scale-105 shadow-lg"</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>aria-label="Search Button"</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>Check Appetite</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/button&gt;</span></p>
+<p class="p6"><span class="s9"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div id="results" class="mt-8 p-4 bg-gray-50 rounded-md border border-gray-200 text-gray-700 text-center min-h-[60px] flex items-center justify-center"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;!-- Results will be displayed here --&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p class="text-gray-500"&gt;Enter a class of business and click 'Check Appetite'.&lt;/p&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p6"><span class="s9"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>// The CSV data is embedded as a string here. In a real-world scenario,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>// you might load this from a server or a hosted CSV file.</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const csvData = `Description Of Exposure,Premises Liability ,Products Liability ,Property &amp; IM, Auto &amp; <span class="Apple-converted-space">            </span>Garage,WC,Comments</span></p>
+<p class="p4"><span class="s1">Advertising Sign Companies - outdoor,1,1,1,1,3,</span></p>
+<p class="p4"><span class="s1">Air Conditioning Equipment - dealers or distributors only,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">"Air Conditioning Systems or Equipment - dealers or distributors and installation, servicing or repair ",1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Antique Stores,1,1,1,1,1,"Contents coverage at ACV only with a $500,000 maximum limit.<span class="Apple-converted-space">  </span>NFPA 33 compliant spray booth required if refinishing.<span class="Apple-converted-space">  </span>Ineligible if Protection Class 9 or 10."</span></p>
+<p class="p4"><span class="s1">"Appliances and Accessories installation, servicing or repair - commercial",1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">"Appliances and Accessories - installation, servicing or repair - household",1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Appliance Distributors - household type,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Appliance Stores - household type,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Army and Navy Stores,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Art Galleries - Not-For-Profit only,1,1,1,1,1,No coverage for Fine Arts.</span></p>
+<p class="p4"><span class="s1">Art Galleries - Other than Not-For-Profit,1,1,1,1,1,No coverage for Fine Arts.</span></p>
+<p class="p4"><span class="s1">Auctioneers - livestock - sales conducted away from the insured's premises,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Auctioneers - sales conducted away from the insured's premises,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Auctions - on premises owned or rented by the insured,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Automobile Dealers - new,1,1,1,1,1,"NFPA 33 compliant spray booth and Auto Body Shop Questionnaire (Form 1859) required if spray painting.<span class="Apple-converted-space">  </span>Incidental towing only, no 24 hour or emergency towing services."</span></p>
+<p class="p4"><span class="s1">Automobile Dealers - used,2,2,1,2,2,Ineligible if major body work done.<span class="Apple-converted-space">  </span>Non-franchise Dealer Questionnaire (Form 1860) required.<span class="Apple-converted-space">  </span>NFPA 33 compliant spray booth and Auto Body Shop Questionnaire (Form 1859) required if spray painting.</span></p>
+<p class="p4"><span class="s1">Automobile Parts and Supplies Distributors,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Automobile Parts and Supplies Stores,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Automobile Quick Lubrication Services,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Automobile Repair or Service Shops,1,1,1,1,1,"Incidental towing only, no 24 hour or emergency towing services. Passenger car and light truck repair only."</span></p>
+<p class="p4"><span class="s1">Automobile Repair Shops - self-service,2,2,2,2,1,"Incidental towing only, no 24 hour or emergency towing services. Passenger car and light truck repair only."</span></p>
+<p class="p4"><span class="s1">Automobile Rustproofing,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Bakeries,1,1,1,1,1,"BOP eligible if no deep fat frying. If deep fat frying, a UL 300 compliant automatic extinguishing system and Restaurant Questionnaire (Form 1861) required.<span class="Apple-converted-space">  </span>"</span></p>
+<p class="p4"><span class="s1">Bakery Plants,1,1,2,1,1,"If deep fat frying, a UL 300 compliant automatic extinguishing system and Restaurant Questionnaire (Form 1861) required."</span></p>
+<p class="p4"><span class="s1">Barber or Beauty Shop Supplies Distributors,1,1,1,1,1,BOP eligible.<span class="Apple-converted-space">  </span>Ineligible if products mixed or labeled under insured's name.</span></p>
+<p class="p4"><span class="s1">Barber Shops,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Bazaars - operated by the insured - Not-For-Profit only,2,2,2,2,2,Used when a variety of products sold.<span class="Apple-converted-space">  </span>Refer all Special Events.</span></p>
+<p class="p4"><span class="s1">Bazaars - operated by the insured - Other than Not-For-Profit,2,2,2,2,2,Used when a variety of products sold.<span class="Apple-converted-space">  </span>Refer all Special Events.</span></p>
+<p class="p4"><span class="s1">Beach Chairs and Umbrellas - rented to others,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Beauty Parlors and Hair Styling Salons,1,1,1,1,1,BOP eligible.<span class="Apple-converted-space">  </span>Exclude skin tanning.</span></p>
+<p class="p4"><span class="s1">Beverage Distributors - alcoholic other than beer,1,1,1,1,2,Alarm system required.</span></p>
+<p class="p4"><span class="s1">Beverage Distributors - nonalcoholic and beer,1,1,1,1,2,Alarm system required.</span></p>
+<p class="p4"><span class="s1">Beverage Stores - liquor and wine,1,1,1,1,2,BOP eligible.<span class="Apple-converted-space">  </span>Alarm system required.<span class="Apple-converted-space">  </span>Liquor Liability policy must be in place and proof of coverage required.</span></p>
+<p class="p4"><span class="s1">Beverage Stores - soft drinks and beer,1,1,1,1,2,BOP eligible.<span class="Apple-converted-space">  </span>Alarm system required.<span class="Apple-converted-space">  </span>Liquor Liability policy must be in place and proof of coverage required.</span></p>
+<p class="p4"><span class="s1">Bicycle Stores - sales and servicing,1,1,1,1,1,BOP eligible.<span class="Apple-converted-space">  </span>No rental exposure.</span></p>
+<p class="p4"><span class="s1">Billiard or Pool Table Mfg.,2,2,2,2,2,Ineligible if Protection Class 9 or 10.<span class="Apple-converted-space">  </span>Dust collection system required.<span class="Apple-converted-space">  </span>Light Manufacturing Questionnaire (Form 1956) required.</span></p>
+<p class="p4"><span class="s1">Boat Storage and Moorage,1,1,1 - Buildings<span class="Apple-converted-space">                                                                  </span>P - Dock Storage,1,1,Dry storage only.<span class="Apple-converted-space">  </span>Storage of flammables or hazardous materials prohibited.<span class="Apple-converted-space">  </span>No transportation or towing of boats.</span></p>
+<p class="p4"><span class="s1">Book Distributors,1,1,1,1,2,</span></p>
+<p class="p4"><span class="s1">Bookbinding - Not-For-Profit only,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Bookbinding - Other than Not-For-Profit,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Bookbinding and Printers Supplies,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Books and Magazines Stores - Not-For-Profit only,1,1,1,1,1,BOP eligible. Adult material prohibited.</span></p>
+<p class="p4"><span class="s1">Books and Magazines Stores - Other than Not-For-Profit,1,1,1,1,1,BOP eligible. Adult material prohibited.</span></p>
+<p class="p4"><span class="s1">Building Material Dealers - other than secondhand material,1,1,1,1,1,"If lumber sales exceed 50% of gross receipts, refer to Lumberyard."</span></p>
+<p class="p4"><span class="s1">Building Material Distributors,1,1,1,2,1,</span></p>
+<p class="p4"><span class="s1">Buildings or Premises - bank and other financial institutions,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Buildings or Premises - bank or office - mercantile or manufacturing (lessor's risk only) - Not-For-Profit only,1,1,1,1,1,"If occupancy has grease laden cooking, please click here for eligibility guidelines."</span></p>
+<p class="p4"><span class="s1">Buildings or Premises - bank or office - mercantile or manufacturing (lessor's risk only) - Other than Not-For-Profit,1,1,1,1,1,"If occupancy has grease laden cooking, please click here for eligibility guidelines."</span></p>
+<p class="p4"><span class="s1">Buildings or Premises - bank or office - mercantile or manufacturing (lessor's risk only) - maintained by the insured - Not-For-Profit only,1,1,1,1,1,"If occupancy has grease laden cooking, please click here for eligibility guidelines."</span></p>
+<p class="p4"><span class="s1">Buildings or Premises - bank or office - mercantile or manufacturing (lessor's risk only) - maintained by the insured - Other than Not-For-Profit,1,1,1,1,1,"If occupancy has grease laden cooking, please click here for eligibility guidelines."</span></p>
+<p class="p4"><span class="s1">Buildings or Premises - office - Not-For-Profit only,1,1,1,1,1,May be BOP eligible depending on type of risk. Refer to BOP manual.</span></p>
+<p class="p4"><span class="s1">Buildings or Premises - office - Other than Not-For-Profit,1,1,1,1,1,May be BOP eligible depending on type of risk. Refer to BOP manual.</span></p>
+<p class="p4"><span class="s1">Buildings or Premises - office - premises occupied by employees of the insured - Not-For-Profit only,1,1,1,1,1,May be BOP eligible depending on type of risk. Refer to BOP manual.</span></p>
+<p class="p4"><span class="s1">Buildings or Premises - office - premises occupied by employees of the insured - Other than Not-For-Profit,1,1,1,1,1,May be BOP eligible depending on type of risk. Refer to BOP manual.</span></p>
+<p class="p4"><span class="s1">Cable Installation in Conduits or Subways,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Cable or Subscription Television Companies,1,1,1,1,1,No work above 3 stories.<span class="Apple-converted-space">  </span>No overhead line or pole work.</span></p>
+<p class="p4"><span class="s1">Camera and Photographic Equipment Stores,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Camper or Travel Trailer Sales Agencies,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Candy or Confectionery Stores,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Car Washes - self-service,1,1,1,1,1,$250 Property Damage deductible applies to customers' autos.<span class="Apple-converted-space">   </span></span></p>
+<p class="p4"><span class="s1">Car Washes - other than self-service,1,1,1,1,1,$250 Property Damage deductible applies to customers' autos.<span class="Apple-converted-space">   </span></span></p>
+<p class="p4"><span class="s1">Carpentry - construction of residential property not exceeding three stories in height,1,1,1,1,1,"Ineligible if cost of subcontractors exceeds 50% of gross receipts, unless risk is a home builder.<span class="Apple-converted-space">  </span>If a home builder, VIP Home Builder guidelines must be met, click here to review.<span class="Apple-converted-space">  </span>VIP Home Builder Supplemental Application (Form 1929) required.<span class="Apple-converted-space">  </span>No work above 3 stories.<span class="Apple-converted-space">  </span>"</span></p>
+<p class="p4"><span class="s1">Carpentry <span class="Apple-converted-space">  </span>,1,1,1,1,1,Ineligible if cost of subcontractors exceeds 50% of gross receipts.<span class="Apple-converted-space">  </span>No work above 3 stories. <span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Carpentry - interior,1,1,1,1,1,Ineligible if cost of subcontractors exceeds 50% of gross receipts.<span class="Apple-converted-space">  </span>No work above 3 stories. <span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Carpentry - shop only,1,2,2,1,1,Ineligible if Protection Class 9 or 10.<span class="Apple-converted-space">  </span>Dust collection system required.<span class="Apple-converted-space">  </span>Light Manufacturing Questionnaire (Form 1956) required.<span class="Apple-converted-space">  </span>NFPA 33 compliant spray booth required if refinishing.</span></p>
+<p class="p4"><span class="s1">"Carpet, Rug, Furniture or Upholstery Cleaning - on customers' premises",1,1,1,1,1,$250 per claim Property Damage deductible applies.</span></p>
+<p class="p4"><span class="s1">"Carpet, Rug, or Upholstery Cleaning - shop only",1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Catalog or Premium Coupon Redemption Stores,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Ceiling or Wall Installation - metal,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Cemeteries - Not-For-Profit only,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Cemeteries - Other than Not-For-Profit,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Chairs - rented to others,2,2,2,1,1,</span></p>
+<p class="p4"><span class="s1">Chimney Cleaning,1,1,1,1,2,$250 per claim Property Damage deductible applies.<span class="Apple-converted-space">  </span>No work above 3 stories.<span class="Apple-converted-space">     </span></span></p>
+<p class="p4"><span class="s1">"China, Porcelain or Earthenware Mfg.",1,2,2,2,2,Acceptability will depend upon the type of product made.<span class="Apple-converted-space">  </span>Light Manufacturing Questionnaire (Form 1956) required.</span></p>
+<p class="p4"><span class="s1">Churches or Other Houses of Worship,1,1,1,2,1,"BOP eligible. No day care, nursery, elementary, junior high, or high school. No sponsored activities. No church buses or vans."</span></p>
+<p class="p4"><span class="s1">Cleaning - outside surfaces of buildings and other exterior surfaces,1,1,1,1,2,$250 per claim property damage deductible applies.<span class="Apple-converted-space">  </span>No work above 3 stories.<span class="Apple-converted-space">  </span>No sandblasting.</span></p>
+<p class="p4"><span class="s1">Clock Mfg.,1,1,1,2,2,Light Manufacturing Questionnaire (Form 1956) required.</span></p>
+<p class="p4"><span class="s1">Clothing or Wearing Apparel Distributors,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Clothing or Wearing Apparel Stores - Not-For-Profit only,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Clothing or Wearing Apparel Stores - Other than Not-For-Profit,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Coffins or Caskets Mfg.,1,1,1,2,2,Ineligible if Protection Class 9 or 10.<span class="Apple-converted-space">  </span>Dust collection system required.<span class="Apple-converted-space">  </span>Light Manufacturing Questionnaire (Form 1956) required.</span></p>
+<p class="p4"><span class="s1">Collectibles and Memorabilia Stores,1,1,1,1,1,"Contents coverage at ACV only with a $500,000 maximum limit."</span></p>
+<p class="p4"><span class="s1">Commissary Work,2,2,2,1,2,"If deep fat frying, a UL 300 compliant automatic extinguishing system and Restaurant Questionnaire (Form 1861) required."</span></p>
+<p class="p4"><span class="s1">Communication Equipment Installation - industrial or commercial,1,1,1,1,1,No work above 3 stories.<span class="Apple-converted-space">     </span></span></p>
+<p class="p4"><span class="s1">Computer Consulting or Programming,1,1,1,1,1,Professional Liability excluded.<span class="Apple-converted-space">  </span>This coverage must be placed elsewhere and proof of coverage required.</span></p>
+<p class="p4"><span class="s1">Computer Data Processing - time sharing,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Computer Data Processing - operations,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Computer Mfg.,2,2,2,2,2,Light Manufacturing Questionnaire (Form 1956) required.</span></p>
+<p class="p4"><span class="s1">Computer Service or Repair,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Computer Software Mfg. - Pre-packaged,2,2,2,2,2,Light Manufacturing Questionnaire (Form 1956) required.</span></p>
+<p class="p4"><span class="s1">Computer Stores,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Concessionaires,2,2,2,2,1,Autos with grease laden cooking ineligible.</span></p>
+<p class="p4"><span class="s1">"Concessionaires - Checkroom, shoeshine, or toilet concessions in hotels, restaurants, railroad stations, etc.",1,1,1,2,1,</span></p>
+<p class="p4"><span class="s1">Concrete Construction,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">"Condominiums - commercial - bank or mercantile, manufacturing or office (association risk only)",1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Condominiums - commercial shopping centers (association risk only),1,1,1,1,1,BOP eligible. Refer to specific occupancy.</span></p>
+<p class="p4"><span class="s1">Condominiums - commercial warehouses - manufacturing or private (association risk only),1,1,2,2,2,Refer to specific occupancy.</span></p>
+<p class="p4"><span class="s1">Conduit Construction for Cables or Wires,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Consultants - NOC,1,1,1,1,1,"Underwrite Professional Liability closely.<span class="Apple-converted-space">  </span>If coverage is excluded, must be placed elsewhere and proof of coverage required."</span></p>
+<p class="p4"><span class="s1">Contractors,1,2,1,2,2,</span></p>
+<p class="p4"><span class="s1">Contractors - Executive Supervisors or Executive Superintendents,2,2,1,1,2,Must be written with other classes of normally acceptable size and type of project.</span></p>
+<p class="p4"><span class="s1">"Contractors Equipment Dealers - ladders, excluding hoists, scaffolds or towers",1,2,1,1,1,No rental exposures.</span></p>
+<p class="p4"><span class="s1">Contractors Permanent Yards - maintenance or storage of equipment or material,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Convents or Monasteries,1,1,1,2,1,No transportation of people.<span class="Apple-converted-space">  </span>Underwrite Hired &amp; Non-owned coverage closely.</span></p>
+<p class="p4"><span class="s1">Copying or Duplicating Services - retail,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">"Cosmetic, Hair or Skin Preparation Stores",1,1,1,1,1,BOP eligible. No packaging of product under own name.</span></p>
+<p class="p4"><span class="s1">Cotton or Wool Merchants,1,1,2,1,2,</span></p>
+<p class="p4"><span class="s1">Crematories - Not-For-Profit only,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Crematories - Other than Not-For-Profit,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Cutlery (not powered) and Flatware Mfg.,1,2,2,2,3,Acceptability will depend upon the type of product made.<span class="Apple-converted-space">  </span>Light Manufacturing Questionnaire (Form 1956) required. <span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Dairy Products or Butter and Egg Stores - Not-For-Profit only,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Dairy Products or Butter and Egg Stores - Other than Not-For-Profit,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Debris Removal - construction site,2,2,2,2,2,</span></p>
+<p class="p4"><span class="s1">Decorating,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Department or Discount Stores,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Diagnostic Testing Laboratories,1,2,1,1,1,Professional Liability excluded.<span class="Apple-converted-space">  </span>This coverage must be in place and proof of coverage required.</span></p>
+<p class="p4"><span class="s1">Distributors - food or drink,1,1,1,1,1,Ineligible if relabeling under own name.</span></p>
+<p class="p4"><span class="s1">Distributors - no food or drink,1,1,1,1,1,Ineligible if relabeling under own name.</span></p>
+<p class="p4"><span class="s1">Door or Window Mfg. - wood,2,2,2,2,2,Ineligible if Protection Class 9 or 10.<span class="Apple-converted-space">  </span>Dust collection system required.<span class="Apple-converted-space">  </span>Light Manufacturing Questionnaire (Form 1956) required.</span></p>
+<p class="p4"><span class="s1">Door or Window Mfg. - other than wood,2,2,2,2,2,Light Manufacturing Questionnaire (Form 1956) required. <span class="Apple-converted-space">   </span></span></p>
+<p class="p4"><span class="s1">"Door, Window or Assembled Millwork - installation, service or repair - metal",1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Draftsmen,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">"Driveway, Parking Area or Sidewalk - paving or repaving",1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Drug Distributors,1,2,2,1,1,Alarm system required.</span></p>
+<p class="p4"><span class="s1">Drugstores,1,1,1,1,1,Professional Liability excluded.<span class="Apple-converted-space">  </span>This coverage must be placed elsewhere and proof of coverage required.<span class="Apple-converted-space">  </span>No rental exposure.</span></p>
+<p class="p4"><span class="s1">Drugstores - no table or counter service for beverage or food,1,1,1,1,1,Professional Liability excluded.<span class="Apple-converted-space">  </span>This coverage must be placed elsewhere and proof of coverage required.<span class="Apple-converted-space">  </span>No rental exposure.</span></p>
+<p class="p4"><span class="s1">"Dry Goods Dealers - Retail (including Fabrics, Yarn and Piece Goods)",1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Dry Wall or Wallboard Installation,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Electrical and Lighting Stores,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">"Electrical Apparatus - installation, servicing or repair",1,1,1,1,1,"No wiring of alarm systems, automatic extinguishing/fire suppression systems, or heavy industrial exposures.<span class="Apple-converted-space">  </span>"</span></p>
+<p class="p4"><span class="s1">Electrical Contractors,1,1,1,1,1,"No wiring of alarm systems, automatic extinguishing/fire suppression systems, or heavy industrial exposures.<span class="Apple-converted-space">  </span>"</span></p>
+<p class="p4"><span class="s1">Electrical Equipment Distributors,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Electrical Work - within buildings,1,1,1,1,1,"No wiring of alarm systems, automatic extinguishing/fire suppression systems, or heavy industrial exposures.<span class="Apple-converted-space">  </span>"</span></p>
+<p class="p4"><span class="s1">Electronic Store,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Engineers or Architects - consulting - not engaged in actual construction,1,1,1,1,1,Professional Liability excluded.<span class="Apple-converted-space">  </span>This coverage must be in place and proof of coverage required.<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Engraving,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Entertainment Performed on Others' Premises,2,2,2,2,2,No equipment left unattended.</span></p>
+<p class="p4"><span class="s1">"Equipment, Fixtures or Supplies - for bars, hotels, offices, restaurants or stores - distributors",1,2,1,1,1,No sales of fire suppression systems.<span class="Apple-converted-space">  </span>No sales or installation of restaurant equipment.<span class="Apple-converted-space">  </span>Underwrite used equipment sales closely.</span></p>
+<p class="p4"><span class="s1">"Event, Party or Wedding Planners",1,1,1,1,1,Professional Liability excluded.<span class="Apple-converted-space">  </span>This coverage must be in place and proof of coverage required.<span class="Apple-converted-space">  </span>No rental exposures.</span></p>
+<p class="p4"><span class="s1">Excavation,1,1,1,1,2,"Refer any sewer or water main excavation.<span class="Apple-converted-space">  </span>Excavation Questionnaire (Form 761) required.<span class="Apple-converted-space">  </span>If snowplowing, must be incidental to exposure we insure.<span class="Apple-converted-space">  </span>$250 per claim Property Damage deductible applies."</span></p>
+<p class="p4"><span class="s1">Fabric Distributors,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Fabric Stores,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Fence Dealers,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Fence Erection Contractors,1,1,1,1,1,No installation of playground equipment.<span class="Apple-converted-space">  </span>$250 per claim Property Damage deductible applies.</span></p>
+<p class="p4"><span class="s1">Floor Covering Distributors,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Floor Covering Installation - not ceramic tile or stone,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">"Floor Covering Mfg. - not carpets, rugs, ceramic or stone tiles",1,2,2,2,2,Acceptability will depend upon the type of product made.<span class="Apple-converted-space">  </span>Light Manufacturing Questionnaire (Form 1956) required.</span></p>
+<p class="p4"><span class="s1">Floor Covering Stores,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Floor Waxing,1,1,1,1,1,Work in high traffic areas must be performed during non-business hours.</span></p>
+<p class="p4"><span class="s1">Florists,1,1,1 - Sales outlets <span class="Apple-converted-space">                                                            </span>2 - Greenhouses,1,1,BOP eligible.<span class="Apple-converted-space">  </span>No glass greenhouses.<span class="Apple-converted-space">  </span>Plexiglass greenhouses are acceptable.<span class="Apple-converted-space">  </span>May consider plastic covered greenhouses with a higher deductible.</span></p>
+<p class="p4"><span class="s1">Formal Wear or Costumes - rented to others,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Fraternal Orders,2,2,2,2,2,"Alcohol sales up to 35% of gross receipts acceptable.<span class="Apple-converted-space">  </span>Liquor Liability coverage must be in place and proof of coverage required.<span class="Apple-converted-space">  </span>If deep fat frying, UL 300 automatic extinguishing system and Restaurant Questionnaire (Form 1861) required.<span class="Apple-converted-space">  </span>No youth athletic clubs or leagues.<span class="Apple-converted-space">  </span>No transportation of people.<span class="Apple-converted-space">  </span>Underwrite Hired &amp; Non-owned coverage closely."</span></p>
+<p class="p4"><span class="s1">Frozen Foods - distributors,1,1,1,2,1,</span></p>
+<p class="p4"><span class="s1">"Fruit, Nut or Vegetable Dealers",1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">"Fruit, Nut or Vegetable Distributors",1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Funeral Homes or Chapels,1,1,1,1,1,Non-business related limo services or use of emergency vehicles prohibited.</span></p>
+<p class="p4"><span class="s1">Furniture Mfg. or Assembling - other than wood,1,2,2,2,2,Acceptability will depend upon the type of product made.<span class="Apple-converted-space">  </span>Light Manufacturing Questionnaire (Form 1956) required.<span class="Apple-converted-space">  </span>NFPA 33 compliant spray booth required if refinishing.</span></p>
+<p class="p4"><span class="s1">Furniture Mfg. or Assembling - wood,1,2,2,2,2,Ineligible if Protection Class 9 or 10.<span class="Apple-converted-space">  </span>Dust collection system required.<span class="Apple-converted-space">  </span>Light Manufacturing Questionnaire (Form 1956) required.<span class="Apple-converted-space">  </span>NFPA 33 compliant spray booth required if refinishing.</span></p>
+<p class="p4"><span class="s1">Furniture or Fixtures - installation in offices or stores - portable - metal or wood,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Furniture Stores - Not-For-Profit only,1,1,1,1,1,BOP eligible if selling new furniture only.<span class="Apple-converted-space">  </span>Ineligible if Protection Class 9 or 10.<span class="Apple-converted-space">  </span>NFPA 33 compliant spray booth required if refinishing.</span></p>
+<p class="p4"><span class="s1">Furniture Stores - Other than Not-For-Profit,1,1,1,1,1,BOP eligible if selling new furniture only.<span class="Apple-converted-space">  </span>Ineligible if Protection Class 9 or 10.<span class="Apple-converted-space">  </span>NFPA 33 compliant spray booth required if refinishing.</span></p>
+<p class="p4"><span class="s1">Gardening and Light Farming Supply Distributors,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Gardening and Light Farming Supply Dealers - retail,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Gemstone Cutting or Polishing,1,1,1,1,1,No Jewelers Block coverage available.</span></p>
+<p class="p4"><span class="s1">Gift Shops - Not-For-Profit only,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Gift Shops - Other than Not-For-Profit,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Glass Dealers and Glaziers,1,1,1,1,1,No work above 3 stories. <span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Golf Driving Ranges,2,2,2,2,2,</span></p>
+<p class="p4"><span class="s1">Grading of Land,1,1,1,1,1,$250 per claim Property Damage deductible applies. <span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Greenhouse Erection,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Greenhouses,1,1,2,1,2,No glass greenhouses. Plexiglass greenhouses are acceptable.<span class="Apple-converted-space">  </span>May consider plastic covered greenhouses with a higher deductible. <span class="Apple-converted-space">   </span></span></p>
+<p class="p4"><span class="s1">Grocery Distributors,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Grocery Stores,1,1,1,1,1,"BOP eligible if no cooking, less than $3,000,000 gross receipts, and less than 25,000 square feet.<span class="Apple-converted-space">  </span>If deep fat frying, a UL 300 compliant automatic extinguishing system and Restaurant Questionnaire (Form 1861) required."</span></p>
+<p class="p4"><span class="s1">Handyperson,1,1,1,1,1,No work above 3 stories. <span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Hardware and Tool Distributors,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Hardware Stores,1,1,1,1,1,"BOP eligible.<span class="Apple-converted-space">  </span>If rental exposure, acceptability will depend on type of items rented."</span></p>
+<p class="p4"><span class="s1">Health or Natural Food Stores,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Hearing Aid - distributors,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Hearing Aid Stores,1,1,1,1,1,BOP eligible.<span class="Apple-converted-space">  </span>Professional Liability excluded.<span class="Apple-converted-space">  </span>This coverage must be in place and proof of coverage required.</span></p>
+<p class="p4"><span class="s1">Heating or Combined Heating and Air Conditioning Equipment - dealers or distributors only,1,1,1,1,1,No hauling of LPG.</span></p>
+<p class="p4"><span class="s1">"Heating or Combined Heating and Air Conditioning Systems or Equipment - dealers or distributors and installation, servicing or repair",2,2,1,1,1,"No hauling of LPG.<span class="Apple-converted-space">  </span>No high pressure boiler installation or repair.<span class="Apple-converted-space">  </span>Installation of roof top units up to 25% of gross receipts if crane exposure is subcontracted, and insured is added as an additional insured.<span class="Apple-converted-space">  </span>No work above 3 stories. "</span></p>
+<p class="p4"><span class="s1">"Heating or Combined Heating and Air Conditioning systems or Equipment - dealers or distributors and installation, servicing or repair - no liquefied petroleum gas (LPG) equipment sales or work",1,1,1,1,1,"No high pressure boiler installation or repair.<span class="Apple-converted-space">  </span>Installation of roof top units up to 25% of gross receipts if crane exposure is subcontracted, and insured is added as an additional insured.<span class="Apple-converted-space">  </span>No work above 3 stories.<span class="Apple-converted-space">  </span>"</span></p>
+<p class="p4"><span class="s1">"Hobby, Craft or Artists' Supply - distributors",1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">"Hobby, Craft or Artists' Supply Stores",1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Home Furnishings Stores,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Home Improvement Stores,1,1,1,2,1,"If rental exposure, acceptability will depend on types of items rented."</span></p>
+<p class="p4"><span class="s1">"Hone, Oilstone or Whetstone Mfg.",1,2,2,2,2,Acceptability will depend upon the type of product made.<span class="Apple-converted-space">  </span>Light Manufacturing Questionnaire (Form 1956) required.</span></p>
+<p class="p4"><span class="s1">House Furnishings Installation,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Ice Cream Stores,1,1,1 - No cooking<span class="Apple-converted-space">                                                      </span>3 - With cooking,1,1,"BOP eligible if no cooking.<span class="Apple-converted-space">  </span>If cooking, a UL 300 compliant automatic extinguishing system and Restaurant Questionnaire (Form 1861) required, ineligible if Protection Class 9 or 10."</span></p>
+<p class="p4"><span class="s1">Ice Dealers and Distributors,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Inspection and Appraisal Companies - inspecting for insurance or valuation purposes,1,1,1,1,1,Professional Liability excluded.<span class="Apple-converted-space">  </span>This coverage must be in place and proof of coverage required.</span></p>
+<p class="p4"><span class="s1">Insulation Work - mineral,1,1,1,1,1,Respiratory safety equipment required.<span class="Apple-converted-space">  </span>$250 per claim Property Damage deductible applies. <span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Insulation Work - organic or plastic in sold state,1,1,1,1,1,Respiratory safety equipment required.<span class="Apple-converted-space">  </span>$250 per claim Property Damage deductible applies. <span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Insulation Work - plastic,1,1,1,1,1,Respiratory safety equipment required.<span class="Apple-converted-space">  </span>$250 per claim Property Damage deductible applies. <span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Insurance Agents,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Interior Decorators,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Investment Advice,1,1,1,1,1,BOP eligible.<span class="Apple-converted-space">  </span>Professional Liability excluded.<span class="Apple-converted-space">  </span>This coverage must be in place and proof of coverage required.</span></p>
+<p class="p4"><span class="s1">Irrigation or Drainage System Construction,1,1,1,1,1,"Farm work only, no livestock confinement.<span class="Apple-converted-space">  </span>"</span></p>
+<p class="p4"><span class="s1">Irrigation Works Operations,1,1,1,1,1,"Farm work only, no livestock confinement.<span class="Apple-converted-space">  </span>"</span></p>
+<p class="p4"><span class="s1">Janitorial Services,1,1,1,1,1,No cleaning of restaurant hoods or ducts.<span class="Apple-converted-space">  </span>$250 per claim Property Damage deductible applies. <span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Janitorial Supplies - dealers or distributors,1,1,1,1,1,No mixing or blending of items sold under insured's name or label.</span></p>
+<p class="p4"><span class="s1">Jewelry Mfg.,1,2,2,2,2,No electroplating.<span class="Apple-converted-space">  </span>No hazardous waste hauling.<span class="Apple-converted-space">  </span>Light Manufacturing Questionnaire (Form 1956) required.</span></p>
+<p class="p4"><span class="s1">Jewelry Stores or Distributors,1,1,1,1,1,Alarm required. No jewelers block.</span></p>
+<p class="p4"><span class="s1">"Kennels - breeding, boarding or sales",2,2,1,2,2,</span></p>
+<p class="p4"><span class="s1">Lamp Shade Mfg.,1,2,2,2,2,Light Manufacturing Questionnaire (Form 1956) required.</span></p>
+<p class="p4"><span class="s1">Lamps or Lanterns Mfg. - electric,1,2,2,2,2,No electroplating.<span class="Apple-converted-space">  </span>No hazardous waste hauling.<span class="Apple-converted-space">  </span>Light Manufacturing Questionnaire (Form 1956) required.</span></p>
+<p class="p4"><span class="s1">Lamps or Lanterns Mfg. - other than electric,1,2,2,2,2,No electroplating.<span class="Apple-converted-space">  </span>No hazardous waste hauling.<span class="Apple-converted-space">  </span>Light Manufacturing Questionnaire (Form 1956) required.</span></p>
+<p class="p4"><span class="s1">Landscape Gardening,1,1,1,1,1,"If snowplowing, must be incidental to exposure we insure.<span class="Apple-converted-space">  </span>"</span></p>
+<p class="p4"><span class="s1">Laundries and Dry Cleaners - self-service,1,1,1,1,1,Video surveillance required. Cannot be open 24 hours.</span></p>
+<p class="p4"><span class="s1">Laundries and Dry Cleaning Plants,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Laundry and Dry Cleaning or Dyeing Receiving Stations,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Laundry and Dry Cleaning Stores,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Laundry Rental Service,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Lawn Care Services,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Lawyers Offices - Not-For-Profit only,1,1,1,1,1,BOP eligible.<span class="Apple-converted-space">  </span>Professional Liability excluded.<span class="Apple-converted-space">  </span>This coverage must be in place and proof of coverage required.</span></p>
+<p class="p4"><span class="s1">Lawyers Offices - Other than Not-For-Profit,1,1,1,1,1,BOP eligible.<span class="Apple-converted-space">  </span>Professional Liability excluded.<span class="Apple-converted-space">  </span>This coverage must be in place and proof of coverage required.</span></p>
+<p class="p4"><span class="s1">Leather Goods Mfg.,1,2,2,2,2,Acceptability will depend upon the type of product made.<span class="Apple-converted-space">  </span>Light Manufacturing Questionnaire (Form 1956) required.</span></p>
+<p class="p4"><span class="s1">Libraries,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Lithographing,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Locksmiths,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Luggage Goods Stores,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Luggage Mfg.,1,2,2,2,2,Light Manufacturing Questionnaire (Form 1956) required.</span></p>
+<p class="p4"><span class="s1">Machinery or Equipment Dealers - yard or garden type,1,1,1,1,1,No equipment rental.<span class="Apple-converted-space">  </span>Underwrite used equipment sales closely.</span></p>
+<p class="p4"><span class="s1">Mail Box or Packaging Stores,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Mail Order Houses,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Mailing or Addressing Companies,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Markets - not open air (lessor's risk only) Not-For-Profit only,2,2,2,1,2,</span></p>
+<p class="p4"><span class="s1">Markets - not open air (lessor's risk only) Other than Not-For-Profit,2,2,2,1,2,</span></p>
+<p class="p4"><span class="s1">Markets - open air (lessor's risk only) Not-For-Profit only,2,2,2,1,2,</span></p>
+<p class="p4"><span class="s1">Markets - open air (lessor's risk only) Other than Not-For-Profit,2,2,2,1,2,</span></p>
+<p class="p4"><span class="s1">Masonry,1,1,1,1,1,No work above 3 stories. <span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Mausoleums - Not-for-profit only,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Mausoleums - Other than Not-for-profit,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">"Meat, Fish, Poultry or Seafood - distributors",1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">"Meat, Fish, Poultry or Seafood Stores",1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Media Mfg. - prerecorded,2,2,2,1,2,</span></p>
+<p class="p4"><span class="s1">Media Mfg. - blank,2,2,2,1,2,</span></p>
+<p class="p4"><span class="s1">"Medical, Hospital and Surgical Supply Stores",1,1,1,1,1,No rental exposures.<span class="Apple-converted-space">  </span>Acceptability will depend on type of products sold.</span></p>
+<p class="p4"><span class="s1">Medical Offices,1,1,1,1,1,BOP eligible.<span class="Apple-converted-space">  </span>Professional Liability excluded.<span class="Apple-converted-space">  </span>This coverage must be in place and proof of coverage required.</span></p>
+<p class="p4"><span class="s1">Metal Dealers or Distributors - nonstructural,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Metal Erection - decorative or artistic,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Metal Erection - in the construction of dwellings not exceeding 2 stories in height,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Metal Erection - nonstructural,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Model Homes,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">"Monuments, Tombstones and Statuary",1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Motorcycle Dealer - New,2,2,1,2,2,Motorcycle license required for test driving.</span></p>
+<p class="p4"><span class="s1">Museums - Not-For-Profit only,1,1,1,1,1,Alarm required.<span class="Apple-converted-space">  </span>Contents at ACV only.</span></p>
+<p class="p4"><span class="s1">Museums - Other than Not-For-Profit,1,1,1,1,1,Alarm required.<span class="Apple-converted-space">  </span>Contents at ACV only.</span></p>
+<p class="p4"><span class="s1">Music Stores - pre-recorded,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Musical Instrument Mfg.,1,2,2,2,2,No electroplating.<span class="Apple-converted-space">  </span>Light Manufacturing Questionnaire (Form 1956) required.</span></p>
+<p class="p4"><span class="s1">Musical Instrument Stores,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Musical Products Mfg. - pre-recorded,1,2,2,2,2,Acceptability will depend upon the type of product made.<span class="Apple-converted-space">  </span>Light Manufacturing Questionnaire (Form 1956) required.</span></p>
+<p class="p4"><span class="s1">Nail Salons,1,1,1,1,1,Professional Liability excluded.<span class="Apple-converted-space">  </span>This coverage must be in place and proof of coverage required.</span></p>
+<p class="p4"><span class="s1">Newspaper or Magazine Distributors,1,1,1,1,1,No hired and non-owned coverage.</span></p>
+<p class="p4"><span class="s1">Newsstands,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">"Office Machines or Appliances - installation, inspection, adjustment or repair",1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Office Machines or Appliances - retail - no repair,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Office Machines or Appliances - wholesale - no repair,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Optical Goods - Distributors,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Optical Goods Stores,1,1,1,1,1,BOP eligible.<span class="Apple-converted-space">  </span>Professional Liability excluded.<span class="Apple-converted-space">  </span>This coverage must be in place and proof of coverage required.</span></p>
+<p class="p4"><span class="s1">"Paint, Wallpaper or Wallcovering Stores",1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Painting - exterior - buildings or structures - three stories or less in height,1,1,1,1,1,No work above 3 stories.<span class="Apple-converted-space">  </span>$250 per claim Property Damage deductible applies. <span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Painting - interior - buildings or structures,1,1,1,1,1,No work above 3 stories.<span class="Apple-converted-space">  </span>$250 per claim Property Damage deductible applies. <span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">"Painting, Picture or Frame Stores",1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Paper Products Distributors,1,1,2,2,1,Ineligible if protection class 9 or 10.</span></p>
+<p class="p4"><span class="s1">Paperhanging,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Parking - private,2,2,1,1,3,</span></p>
+<p class="p4"><span class="s1">Party Planners,2,2,1,1,2,Professional Liability excluded.<span class="Apple-converted-space">  </span>This coverage must be in place and proof of coverage required.</span></p>
+<p class="p4"><span class="s1">Periodicals Distributors,1,1,1,1,1,No hired and non-owned coverage.</span></p>
+<p class="p4"><span class="s1">Pet Grooming,1,1,1,1,2,</span></p>
+<p class="p4"><span class="s1">Pet Stores,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Photo Finishing Laboratories,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Photographers,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Piano Tuning,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Plastering or Stucco Work,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Plastic or Rubber Supply Goods Distributors,2,2,2,1,2,Ineligible if Protection Class 9 or 10.</span></p>
+<p class="p4"><span class="s1">Plumbing - commercial and industrial,1,1,1,1,1,No high pressure boiler installation or repair.<span class="Apple-converted-space">  </span>No sewer or water main work.</span></p>
+<p class="p4"><span class="s1">Plumbing - residential or domestic,1,1,1,1,1,No high pressure boiler installation or repair. <span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Plumbing Supplies and Fixtures Dealers and Distributors,1,1,1,1,1,BOP eligible. No packaging or products sold under the insured's name.</span></p>
+<p class="p4"><span class="s1">Prefabricated Building Erection,2,2,1,2,2,No work above 3 stories.</span></p>
+<p class="p4"><span class="s1">Printers or Electrotypers Supplies - distributors,1,1,1,1,1,BOP eligible.<span class="Apple-converted-space">  </span>No packaging or products sold under insured's name.</span></p>
+<p class="p4"><span class="s1">Printing - Not-For-Profit only,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Printing - Other than Not-For-Profit,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Publishers - books or magazines - Not-For-Profit only,1,1,2,1,1,Personal &amp; Advertising Injury excluded.<span class="Apple-converted-space">  </span>Publishers Liability coverage must be in place and proof of coverage required.</span></p>
+<p class="p4"><span class="s1">Publishers - books or magazines - Other than Not-For-Profit,1,1,2,1,1,Personal &amp; Advertising Injury excluded.<span class="Apple-converted-space">  </span>Publishers Liability coverage must be in place and proof of coverage required.</span></p>
+<p class="p4"><span class="s1">Publishers - newspapers - Not-For-Profit only,1,1,2,1,1,Personal &amp; Advertising Injury excluded.<span class="Apple-converted-space">  </span>Publishers Liability coverage must be in place and proof of coverage required.</span></p>
+<p class="p4"><span class="s1">Publishers - newspapers - Other than Not-For-Profit,1,1,2,1,1,Personal &amp; Advertising Injury excluded.<span class="Apple-converted-space">  </span>Publishers Liability coverage must be in place and proof of coverage required.</span></p>
+<p class="p4"><span class="s1">Real Estate Agents,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Recording Studios,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Refrigeration Equipment - Dealers and Distributors only - commercial,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">"Refrigeration Systems or Equipment - dealers and distributors and installation, servicing or repair - commercial",1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Roofing - residential - three stories and under,1,1,1,1,No WC,"$250 per claim Property Damage deductible applies.<span class="Apple-converted-space">  </span>Asphalt shingle and metal only, no flat roofs, hot tar, or rolled rubber applications.<span class="Apple-converted-space">  </span>"</span></p>
+<p class="p4"><span class="s1">Rubber Stamp Mfg. or Assembling,1,1,2,2,2,Ineligible if Protection Class 9 or 10.<span class="Apple-converted-space">  </span>Light Manufacturing Questionnaire (Form 1956) required.</span></p>
+<p class="p4"><span class="s1">Sales or Service Organizations,1,2,1,1,1,"Underwrite Professional Liability closely.<span class="Apple-converted-space">  </span>If coverage is excluded, must be placed elsewhere and proof of coverage required."</span></p>
+<p class="p4"><span class="s1">Septic Tank Systems - cleaning,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">"Septic Tank Systems - installation, servicing or repair",1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Sewer Mains or Connections Construction,2,2,1,1,2,"No main work, connection work only.<span class="Apple-converted-space">  </span>"</span></p>
+<p class="p4"><span class="s1">Sheet Metal Work - outside,1,1,1,1,1,No work above 3 stories.<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Sheet Metal Work - shop only,1,2,1,1,1,Acceptability will depend on the type of product made.<span class="Apple-converted-space">  </span>Light Manufacturing Questionnaire (Form 1956) required. <span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Ship Chandler Stores,2,2,2,2,2,No hauling of boats. No longshore exposure.</span></p>
+<p class="p4"><span class="s1">Shoe Repair Shops,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Shoe Stores,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">"Shopping Centers - buildings, or premises not occupied by the insured (lessor's risk only)",1,1,2,1,1,"BOP eligibility will depend on specific occupancy.<span class="Apple-converted-space">  </span>If any occupants have grease laden cooking, please click here for eligibility guidelines."</span></p>
+<p class="p4"><span class="s1">"Shopping Centers - indoor malls - buildings, or premises not occupied by the insured (lessor's risk only)",1,1,2,1,1,"BOP eligibility will depend on specific occupancy.<span class="Apple-converted-space">  </span>If any occupants have grease laden cooking, please click here for eligibility guidelines."</span></p>
+<p class="p4"><span class="s1">Siding Installation,1,1,1,1,1,No work above 3 stories. <span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">"Sign Erection, Installation or Repair",1,2,1,1,2,No work above three stories.</span></p>
+<p class="p4"><span class="s1">Sign Mfg. - other than electrical,1,1,2,2,2,"If manufacturing wood signs, ineligible in Protection Class 9 or 10, and dust collection system required.<span class="Apple-converted-space">  </span>Light Manufacturing Questionnaire (Form 1956) required."</span></p>
+<p class="p4"><span class="s1">Sign Painting or Lettering - on buildings or structures,1,1,1,1,2,No work above 3 stories.<span class="Apple-converted-space">  </span>$250 per claim Property Damage deductible applies.</span></p>
+<p class="p4"><span class="s1">Silverware Mfg.,2,2,2,2,2,Acceptability will depend on the type of product made.<span class="Apple-converted-space">  </span>Light Manufacturing Questionnaire (Form 1956) required. <span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Solar Energy Contractors,1,1,1,1,2,No work above 3 stories. <span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Solar Energy Equipment Dealers or Distributors only,1,1,1,1,2,</span></p>
+<p class="p4"><span class="s1">Sporting Goods or Athletic Equipment Distributors,1,2,2,2,1,No products sold under insured's name or label.<span class="Apple-converted-space">  </span>No equipment provided to schools.<span class="Apple-converted-space">  </span>No rental exposure.<span class="Apple-converted-space">  </span>No ammunition reloading or target ranges.</span></p>
+<p class="p4"><span class="s1">Sporting Goods or Athletic Equipment Stores,2,2,1,1,2,No products sold under insured's name or label.<span class="Apple-converted-space">  </span>No equipment provided to schools.<span class="Apple-converted-space">  </span>No rental exposure.<span class="Apple-converted-space">  </span>No ammunition reloading or target ranges.<span class="Apple-converted-space">  </span>No gun shops or gun repair.<span class="Apple-converted-space">  </span>Underwrite sales of used equipment closely.</span></p>
+<p class="p4"><span class="s1">Stationery or Paper Products Distributors,1,1,2,1,1,Ineligible if Protection Class 9 or 10.</span></p>
+<p class="p4"><span class="s1">Stationery or Paper Products Stores,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Stone Cutting or Polishing,1,1,1,1,1,Respiratory safety equipment required.<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Stores - food or drink - Not-For-Profit only,1,1,1,1,1,No products sold under insured's name or label. No equipment provided to schools. No rental exposure.<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Stores - food or drink - Other than Not-For-Profit,1,1,1,1,1,No products sold under insured's name or label. No equipment provided to schools. No rental exposure.<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Stores - no food or drink - Not-For-Profit only,1,1,1,1,1,No products sold under insured's name or label. No equipment provided to schools. No rental exposure.<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Stores - no food or drink - Other than Not-For-Profit,1,1,1,1,1,No products sold under insured's name or label. No equipment provided to schools. No rental exposure.<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Street Cleaning,2,2,1,2,2,Must be incidental to exposure we insure.</span></p>
+<p class="p4"><span class="s1">Surveyors - land - not engaged in actual construction,1,1,1,1,2,Professional Liability excluded.<span class="Apple-converted-space">  </span>This coverage must be in place and proof of coverage required.</span></p>
+<p class="p4"><span class="s1">"Swimming Pools - installation, servicing or repair - above ground",1,1,1,1,1,No diving board or slide installation or repair.</span></p>
+<p class="p4"><span class="s1">"Swimming Pools - installation, servicing or repair - below ground",1,1,1,1,1,No diving board or slide installation or repair.</span></p>
+<p class="p4"><span class="s1">Swimming Pool Servicing,1,1,1,1,1,No diving board or slide installation or repair.</span></p>
+<p class="p4"><span class="s1">Tailor Merchants - men or boys,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Tailoring or Dressmaking Establishments - custom,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Taxidermists,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Telecommunication Equipment Providers,2,2,2,2,2,</span></p>
+<p class="p4"><span class="s1">"Telephone, Telegraph or Cable Television Line Construction",1,1,1,1,1,No work above 3 stories.<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Television or Radio Receiving Set Installation or Repair,1,1,1,1,1,No work above 3 stories.</span></p>
+<p class="p4"><span class="s1">"Textile Bleaching, Dyeing, Mercerizing, Printing, Finishing or Silk Screening - new goods",1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Theaters - motion pictures,2,2,2,1,2,"BOP eligible if fire resistant and under 15,000 square feet."</span></p>
+<p class="p4"><span class="s1">Ticket Agencies,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">"Tile, Stone, Marble, Mosaic or Terrazzo Work - interior construction",1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Tire Dealers ,1,1,1,1,1,No recapping.<span class="Apple-converted-space">  </span>Tire cages required for split-rim wheels.<span class="Apple-converted-space">  </span>Private passenger and light truck tires only.</span></p>
+<p class="p4"><span class="s1">Title Agents,1,1,1,1,1,Professional Liability excluded.<span class="Apple-converted-space">  </span>This coverage must be in place and proof of coverage required.</span></p>
+<p class="p4"><span class="s1">Townhouse Associations (association risk only),2,2,2,1,2,"If swimming pool, must be fenced and no diving board. "</span></p>
+<p class="p4"><span class="s1">Toy Distributors,1,1,2,2,1,</span></p>
+<p class="p4"><span class="s1">Toy Stores,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Trailer Dealers,1,1,1,2,1,Fenced in yard or other security measures must be in place for the inventory. <span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Tree Pruning or Tree Trimming,1,1,1,1,No WC,"$250 per claim Property Damage deductible applies.<span class="Apple-converted-space">  </span>Asphalt shingle and metal only, no flat roofs, hot tar, or rolled rubber applications.<span class="Apple-converted-space">  </span>"</span></p>
+<p class="p4"><span class="s1">Truckers,2,2,2,2,2,Trucking Supplemental Application (Form 1818) required.<span class="Apple-converted-space">  </span>No metropolitan areas.<span class="Apple-converted-space">  </span>No for hire hauling over 500 miles.</span></p>
+<p class="p4"><span class="s1">Upholstering,1,1,2,1,1,Ineligible if Protection Class 9 or 10.<span class="Apple-converted-space">  </span>NFPA 33 compliant spray booth required if refinishing.</span></p>
+<p class="p4"><span class="s1">Upholstering - shop only,1,1,2,1,1,Ineligible if Protection Class 9 or 10.<span class="Apple-converted-space">  </span>NFPA 33 compliant spray booth required if refinishing.</span></p>
+<p class="p4"><span class="s1">Vacant Land - Not-For-Profit only,1,1,1,1,1,Refer any water exposures.</span></p>
+<p class="p4"><span class="s1">Vacant Land - Other than Not-For-Profit,1,1,1,1,1,Refer any water exposures.</span></p>
+<p class="p4"><span class="s1">Variety Stores - Not-For-Profit only,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Variety Stores - Other than Not-For-Profit,1,1,1,1,1,BOP eligible.</span></p>
+<p class="p4"><span class="s1">Venetian Blinds Mfg. or Assembling,1,1,2,1,2,Light Manufacturing Questionnaire (Form 1956) required.</span></p>
+<p class="p4"><span class="s1">Veterinarian or Veterinary Hospitals,1,1,2,2,2,Professional Liability excluded.<span class="Apple-converted-space">  </span>This coverage must be in place and proof of coverage required.</span></p>
+<p class="p4"><span class="s1">Video Stores,1,1,1,1,1,BOP eligible. Alarm system required.</span></p>
+<p class="p4"><span class="s1">Warehouses - occupied by multiple interests (lessor's risk only),2,2,2,2,2,Storage of flammables or hazardous materials prohibited.</span></p>
+<p class="p4"><span class="s1">Warehouses - occupied by single interest (lessor's risk only),2,2,2,2,2,Storage of flammables or hazardous materials prohibited.</span></p>
+<p class="p4"><span class="s1">Warehouses - mini-warehouses,2,2,2,2,2,Storage of flammables or hazardous materials prohibited.</span></p>
+<p class="p4"><span class="s1">Warehouses - private - Not-For-Profit only,2,2,2,2,2,Storage of flammables or hazardous materials prohibited.</span></p>
+<p class="p4"><span class="s1">Warehouses - private - Other than Not-For-Profit,2,2,2,2,2,Storage of flammables or hazardous materials prohibited.</span></p>
+<p class="p4"><span class="s1">"Water Softening Equipment - installation, servicing or repair",1,1,1,1,1,$250 per claim Property Damage deductible applies.</span></p>
+<p class="p4"><span class="s1">Water Softening Equipment - rented to others,1,1,1,1,1,$250 per claim Property Damage deductible applies.</span></p>
+<p class="p4"><span class="s1">Waterproofing - by pressure apparatus,2,2,2,2,2,Exterior spray on application only. <span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">Web Site Designers,1,2,1,1,1,Professional Liability excluded.<span class="Apple-converted-space">  </span>This coverage must be in place and proof of coverage required.</span></p>
+<p class="p4"><span class="s1">Wedding Planners,1,1,1,1,1,Professional Liability excluded.<span class="Apple-converted-space">  </span>This coverage must be in place and proof of coverage required.</span></p>
+<p class="p4"><span class="s1">Window Cleaning,2,2,1,1,2,No work above 3 stories.<span class="Apple-converted-space">  </span>$250 per claim Property Damage deductible applies.</span></p>
+<p class="p4"><span class="s1">Window Decorating,1,1,1,1,1,</span></p>
+<p class="p4"><span class="s1">Wood Products Mfg.,1,2,2,2,2,Ineligible if Protection Class 9 or 10.<span class="Apple-converted-space">  </span>Dust collection system required. NFPA 33 compliant spray booth required if refinishing.<span class="Apple-converted-space">  </span>Acceptability will depend on type of product made.<span class="Apple-converted-space">  </span>Light Manufacturing Questionnaire (Form 1956) required.</span></p>
+<p class="p4"><span class="s1">Wood Turned Products Mfg.,1,2,2,2,2,Ineligible if Protection Class 9 or 10.<span class="Apple-converted-space">  </span>Dust collection system required. NFPA 33 compliant spray booth required if refinishing.<span class="Apple-converted-space">  </span>Acceptability will depend on type of product made.<span class="Apple-converted-space">  </span>Light Manufacturing Questionnaire (Form 1956) required.`;</span></p>
+<p class="p6"><span class="s9"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>// Function to parse CSV data into an array of objects</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>function parseCSV(csv) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>const lines = csv.split('\n');</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>const headers = lines[0].split(',').map(header =&gt; header.trim()); // Trim headers</span></p>
+<p class="p6"><span class="s9"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>const data = [];</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>for (let i = 1; i &lt; lines.length; i++) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>const currentLine = lines[i].trim();</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>if (currentLine === '') continue; // Skip empty lines</span></p>
+<p class="p6"><span class="s9"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>// Handle quoted fields</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>const row = [];</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>let inQuote = false;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>let field = '';</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>for (let j = 0; j &lt; currentLine.length; j++) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>const char = currentLine[j];</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>if (char === '"' &amp;&amp; (j === 0 || currentLine[j-1] === ',' || inQuote)) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>inQuote = !inQuote;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>// Handle escaped quotes (e.g., "" within a field)</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>if (inQuote &amp;&amp; j &lt; currentLine.length - 1 &amp;&amp; currentLine[j+1] === '"') {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>field += '"';</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>j++; // Skip the next quote as it's an escaped one</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>} else if (char === ',' &amp;&amp; !inQuote) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>row.push(field.trim()); // Trim content of field</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>field = '';</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>} else {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>field += char;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>row.push(field.trim()); // Push the last field</span></p>
+<p class="p6"><span class="s9"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>const obj = {};</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>headers.forEach((header, index) =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>obj[header] = row[index] || ''; // Assign value, default to empty string if missing</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>data.push(obj);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>return data;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s9"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>// Parse the embedded CSV data when the script loads</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const appetiteData = parseCSV(csvData);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>console.log("Parsed Appetite Data:", appetiteData); // For debugging</span></p>
+<p class="p6"><span class="s9"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const businessClassInput = document.getElementById('businessClass');</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const searchButton = document.getElementById('searchButton');</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const resultsDiv = document.getElementById('results');</span></p>
+<p class="p6"><span class="s9"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>// Function to perform the search</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>function performSearch() {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>const searchTerm = businessClassInput.value.trim().toLowerCase();</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>if (searchTerm === '') {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>resultsDiv.innerHTML = `&lt;p class="text-gray-500"&gt;Please enter a class of business to search.&lt;/p&gt;`;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>resultsDiv.classList.remove('bg-green-100', 'bg-red-100');</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>resultsDiv.classList.add('bg-gray-50');</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>return;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p6"><span class="s9"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>let foundMatch = false;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>let appetiteStatus = "N/A"; // Default status</span></p>
+<p class="p6"><span class="s9"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>for (const item of appetiteData) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>// Access the "Description Of Exposure" column for matching</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>const description = item['Description Of Exposure'] ? item['Description Of Exposure'].trim().toLowerCase() : '';</span></p>
+<p class="p6"><span class="s9"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>// Simple exact match for now. Could be extended to partial match if needed.</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>if (description === searchTerm) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>foundMatch = true;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>// Access the "Premises Liability" column to check appetite</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>const premisesLiability = item['Premises Liability '] ? item['Premises Liability '].trim() : ''; // Note the space in the header</span></p>
+<p class="p6"><span class="s9"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>if (premisesLiability === '1') {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>appetiteStatus = `&lt;span class="font-bold text-green-700"&gt;IN APPETITE&lt;/span&gt;`;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>resultsDiv.classList.remove('bg-red-100', 'bg-gray-50');</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>resultsDiv.classList.add('bg-green-100');</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>} else if (premisesLiability === '2') {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>appetiteStatus = `&lt;span class="font-bold text-red-700"&gt;OUT OF APPETITE (Referral Required)&lt;/span&gt;`;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>resultsDiv.classList.remove('bg-green-100', 'bg-gray-50');</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>resultsDiv.classList.add('bg-red-100');</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>} else {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>appetiteStatus = `&lt;span class="font-bold text-orange-700"&gt;Status Unknown or Not Applicable&lt;/span&gt;`;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>resultsDiv.classList.remove('bg-green-100', 'bg-red-100');</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>resultsDiv.classList.add('bg-gray-50');</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>resultsDiv.innerHTML = `&lt;p class="text-lg"&gt;"${item['Description Of Exposure']}" is ${appetiteStatus}.&lt;/p&gt;`;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>break; // Stop after finding the first exact match</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p6"><span class="s9"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>if (!foundMatch) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>resultsDiv.innerHTML = `&lt;p class="text-lg text-gray-700"&gt;"${businessClassInput.value}" not found in our records.&lt;/p&gt;`;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>resultsDiv.classList.remove('bg-green-100', 'bg-red-100');</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>resultsDiv.classList.add('bg-gray-50');</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">          </span></span></p>
+</body>
+</html>
